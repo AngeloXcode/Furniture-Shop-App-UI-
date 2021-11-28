@@ -94,6 +94,7 @@
 		5C97E48D27536E670088D2EC = {
 			isa = PBXGroup;
 			children = (
+				5C97E4E3275397050088D2EC /* screenshot */,
 				5C97E4DF275385680088D2EC /* HomeApp--iOS--Info.plist */,
 				5C97E49227536E670088D2EC /* Shared */,
 				5C97E4A127536E6C0088D2EC /* macOS */,
@@ -150,6 +151,13 @@
 				5C97E4B62753840E0088D2EC /* PlayfairDisplay-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		5C97E4E3275397050088D2EC /* screenshot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
