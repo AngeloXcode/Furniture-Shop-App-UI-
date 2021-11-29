@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NavigationView: View {
+struct NavigationUIView: View {
     var body: some View {
         HStack{
             Button(action:{}){
@@ -33,6 +33,6 @@ struct NavigationView: View {
 
 struct NavigationView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView()
+        NavigationUIView()
     }
 }

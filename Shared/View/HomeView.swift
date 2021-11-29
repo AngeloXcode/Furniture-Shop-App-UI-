@@ -12,66 +12,80 @@ struct HomeView : View {
     @State private var selectedIndex : Int = 0
     private let catagories = ["All","Chairs","Sofa","Lamp","Kitchen","Table"]
     var body: some View {
-        ZStack{
-            Color("BGColor")
-                .edgesIgnoringSafeArea(.all)
-            ScrollView {
-                VStack(alignment: .leading){
-                    NavigationView()
-                    TagLineView()
-                        .padding()
-                    SearchView().padding()
-                    ScrollView(.horizontal,showsIndicators: false){
-                        HStack{
-                            ForEach(0 ..< catagories.count) { item in
-                                CategoryItemView(isActive: item == self.selectedIndex,text:catagories[item]).onTapGesture {
-                                    self.selectedIndex = item
+        NavigationView{
+            ZStack{
+                Color("BGColor")
+                    .edgesIgnoringSafeArea(.all)
+                ScrollView {
+                    VStack(alignment: .leading){
+                        NavigationUIView()
+                        TagLineView()
+                            .padding()
+                        SearchView().padding()
+                        ScrollView(.horizontal,showsIndicators: false){
+                            HStack{
+                                ForEach(0 ..< catagories.count) { item in
+                                    CategoryItemView(isActive: item == self.selectedIndex,text:catagories[item]).onTapGesture {
+                                        self.selectedIndex = item
+                                    }
                                 }
                             }
-                        }
-                    }// End of ScrollView
-                    
-                    Text("Popular")
-                        .font(.custom("PlayfairDisplay-Bold", size: 24))
-                        .padding()
-                    
-                    ScrollView(.horizontal,showsIndicators: false){
-                        HStack{
-                            ForEach(0..<5){ item in
-                                LuxuryItemView(name: "\(item+1)")
-                                    .padding(.trailing)
+                        }// End of ScrollView
+                        
+                        Text("Popular")
+                            .font(.custom("PlayfairDisplay-Bold", size: 24))
+                            .padding()
+                        
+                        ScrollView(.horizontal,showsIndicators: false){
+                            HStack{
+                                ForEach(0..<5){ item in
+                                    NavigationLink(destination:DetialsView()
+                                                   ,label: {
+                                        LuxuryItemView(name: "\(item+1)")
+                                            .padding(.trailing)
+                                    }).navigationBarHidden(true)
+                                        .foregroundColor(.black)
+                                }
                             }
-                        }
-                    }.padding(.leading)
-                    
-                    Text("Best Paid")
-                        .font(.custom("PlayfairDisplay-Bold", size: 24))
-                        .padding()
-                    
-                    ScrollView(.horizontal,showsIndicators: false){
-                        HStack{
-                            ForEach(0..<5){ item in
-                                LuxuryItemView(name: "\(item+1)")
-                                    .padding(.trailing)
+                        }.padding(.leading)
+                        
+                        Text("Best Paid")
+                            .font(.custom("PlayfairDisplay-Bold", size: 24))
+                            .padding()
+                        
+                        ScrollView(.horizontal,showsIndicators: false){
+                            HStack{
+                                ForEach(0..<5){ item in
+                                    NavigationLink(destination:DetialsView()
+                                                   ,label: {
+                                        LuxuryItemView(name: "\(item+1)")
+                                            .padding(.trailing)
+                                    }).navigationBarHidden(true)
+                                        .foregroundColor(.black)
+                                    
+                                    
+                                    
+                                }
                             }
-                        }
-                    }.padding(.leading)
-                    
-                }
-            } // End of Main ScrollView
-            
-            HStack{
-                ForEach(0 ..< icons.count) { item in
-                    TabVarItemView(name: "\(icons[item])"){
+                        }.padding(.leading)
                         
                     }
-                }
-            }.padding()
-                .background(Color.white)
-                .clipShape(Capsule())
-                .padding(.horizontal)
-                .shadow(color: .gray.opacity(0.15), radius: 8, x: 2, y: 5)
-                .frame(maxHeight:.infinity,alignment:.bottom)
+                } // End of Main ScrollView
+                
+                HStack{
+                    ForEach(0 ..< icons.count) { item in
+                        TabVarItemView(name: "\(icons[item])"){
+                            
+                        }
+                    }
+                }.padding()
+                    .background(Color.white)
+                    .clipShape(Capsule())
+                    .padding(.horizontal)
+                    .shadow(color: .gray.opacity(0.15), radius: 8, x: 2, y: 5)
+                    .frame(maxHeight:.infinity,alignment:.bottom)
+            }
+            
         }
     }
 }
@@ -160,6 +174,10 @@ struct LuxuryItemView: View {
                     }
                     Spacer()
                     Text("$1299")
+                        .fontWeight(.bold)
+                        .scaledToFit()
+                        .minimumScaleFactor(0.01)
+                    
                 }
                 
             }.padding()

@@ -45,6 +45,8 @@
 		5C97E4DE275384250088D2EC /* PlayfairDisplay-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5C97E4C6275384250088D2EC /* PlayfairDisplay-MediumItalic.ttf */; };
 		5C97E4E1275392440088D2EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C97E4E0275392440088D2EC /* HomeView.swift */; };
 		5C97E4E2275392440088D2EC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C97E4E0275392440088D2EC /* HomeView.swift */; };
+		5CCA1F7C2754B3DC005402A5 /* DetialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1F7B2754B3DC005402A5 /* DetialsView.swift */; };
+		5CCA1F7D2754B3DC005402A5 /* DetialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCA1F7B2754B3DC005402A5 /* DetialsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,7 @@
 		5C97E4C6275384250088D2EC /* PlayfairDisplay-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlayfairDisplay-MediumItalic.ttf"; sourceTree = "<group>"; };
 		5C97E4DF275385680088D2EC /* HomeApp--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "HomeApp--iOS--Info.plist"; sourceTree = "<group>"; };
 		5C97E4E0275392440088D2EC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5CCA1F7B2754B3DC005402A5 /* DetialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetialsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +108,9 @@
 		5C97E49227536E670088D2EC /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				5CCA1F7A2754938C005402A5 /* View */,
 				5C97E4B4275383EC0088D2EC /* Fonts */,
-				5C97E49327536E670088D2EC /* HomeAppApp.swift */,
-				5C97E49427536E670088D2EC /* ContentView.swift */,
 				5C97E49527536E6C0088D2EC /* Assets.xcassets */,
-				5C97E4B127536F060088D2EC /* NavigationView.swift */,
-				5C97E4E0275392440088D2EC /* HomeView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -158,6 +158,18 @@
 			children = (
 			);
 			path = screenshot;
+			sourceTree = "<group>";
+		};
+		5CCA1F7A2754938C005402A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C97E49427536E670088D2EC /* ContentView.swift */,
+				5C97E49327536E670088D2EC /* HomeAppApp.swift */,
+				5C97E4B127536F060088D2EC /* NavigationView.swift */,
+				5C97E4E0275392440088D2EC /* HomeView.swift */,
+				5CCA1F7B2754B3DC005402A5 /* DetialsView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C97E4A527536E6C0088D2EC /* ContentView.swift in Sources */,
+				5CCA1F7C2754B3DC005402A5 /* DetialsView.swift in Sources */,
 				5C97E4E1275392440088D2EC /* HomeView.swift in Sources */,
 				5C97E4B227536F060088D2EC /* NavigationView.swift in Sources */,
 				5C97E4A327536E6C0088D2EC /* HomeAppApp.swift in Sources */,
@@ -298,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C97E4A627536E6C0088D2EC /* ContentView.swift in Sources */,
+				5CCA1F7D2754B3DC005402A5 /* DetialsView.swift in Sources */,
 				5C97E4E2275392440088D2EC /* HomeView.swift in Sources */,
 				5C97E4B327536F060088D2EC /* NavigationView.swift in Sources */,
 				5C97E4A427536E6C0088D2EC /* HomeAppApp.swift in Sources */,
@@ -425,6 +439,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q5B5Z85H7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HomeApp--iOS--Info.plist";
@@ -455,6 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7Q5B5Z85H7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "HomeApp--iOS--Info.plist";
